@@ -2,7 +2,6 @@
   "name": "akashlmp/fullpage-loader",
   "description": "A Filament plugin that adds a full-page loader overlay during Livewire requests.",
   "type": "library",
-  "version": "dev-main",
   "license": "MIT",
   "authors": [
     {
