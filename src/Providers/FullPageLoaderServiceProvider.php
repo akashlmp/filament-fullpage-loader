@@ -8,6 +8,9 @@ class FullPageLoaderServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        $this->publishes([
+            __DIR__ . '/../../config/fullpage-loader.php' => config_path('fullpage-loader.php'),
+        ], 'fullpage-loader-config');
         $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'fullpage-loader');
         FilamentView::registerRenderHook(
             PanelsRenderHook::BODY_END,
@@ -15,7 +18,8 @@ class FullPageLoaderServiceProvider extends ServiceProvider
         );
     }
 
-    public function register(): void
+    public function register()
     {
+        $this->mergeConfigFrom(__DIR__ . '/../../config/fullpage-loader.php', 'fullpage-loader');
     }
 }
