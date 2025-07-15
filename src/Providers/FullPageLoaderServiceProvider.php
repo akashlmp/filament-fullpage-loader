@@ -3,14 +3,14 @@ namespace Akashlmp\FullPageLoader\Providers;
 
 use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\ServiceProvider;
-
+use Filament\View\PanelsRenderHook;
 class FullPageLoaderServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
         $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'fullpage-loader');
         FilamentView::registerRenderHook(
-            'body.end',
+            PanelsRenderHook::BODY_END,
             fn() => view('fullpage-loader::components.full-page-loader')
         );
     }
