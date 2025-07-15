@@ -1,5 +1,5 @@
 <?php
-namespace Akash\FullPageLoader\Providers;
+namespace Akashlmp\FullPageLoader\Providers;
 
 use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\ServiceProvider;
