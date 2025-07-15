@@ -1,8 +1,9 @@
 
-# Filament Full Page Loader
+# Filament Full Page Loader – Laravel Livewire Loading Overlay Plugin
 
-A Filament plugin that shows a full-page loading overlay during Livewire requests.  
-Enhances UX by preventing users from interacting with the page while background operations run.
+A simple and customizable **Filament v3 plugin** that displays a **full-page loader overlay** during **Livewire requests**.  
+Improves user experience by preventing interaction while background tasks are processing.
+
 
 ---
 
