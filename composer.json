@@ -1,0 +1,29 @@
+{
+  "name": "akash/fullpage-loader",
+  "description": "A Filament plugin that adds a full-page loader overlay during Livewire requests.",
+  "type": "library",
+  "version": "dev-main",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "akash",
+      "email": "G6PdM@example.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Akash\\FullPageLoader\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Akash\\FullPageLoader\\Providers\\FullPageLoaderServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "filament/filament": "^3.0"
+  }
+}
