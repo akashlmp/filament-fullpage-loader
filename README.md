@@ -41,7 +41,7 @@ return [
     // Enable or disable the loader globally
     'enabled' => true,
 
-    // Text shown below the spinner
+    // Text shown below the spinner if you are using localization then just padd key eg: common.loading
     'text' => 'Loading...',
 ];
 ```

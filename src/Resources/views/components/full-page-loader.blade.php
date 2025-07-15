@@ -3,9 +3,15 @@
         class="fixed inset-0 z-[9999] flex items-center justify-center bg-white/40 dark:bg-gray-900/40 backdrop-blur-sm transition-opacity duration-300">
         <div class="flex flex-col items-center gap-4">
             <x-filament::loading-indicator class="h-10 w-10 text-primary-600 dark:text-primary-500" />
-            <p class="text-sm font-medium text-gray-700 dark:text-gray-200">
-                {{ config('fullpage-loader.text') }}
-            </p>
+            @php
+                $text = config('fullpage-loader.text');
+                $translatedText = is_string($text) && str_contains($text, '.') ? __($text) : $text;
+            @endphp
+            @if ($translatedText)
+                <p class="text-sm font-medium text-gray-700 dark:text-gray-200">
+                    {{ $translatedText }}
+                </p>
+            @endif
         </div>
     </div>
     <script>
